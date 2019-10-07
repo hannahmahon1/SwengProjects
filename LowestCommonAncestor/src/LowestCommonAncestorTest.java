@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test;
 class LowestCommonAncestorTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testEmpty() {
+		LowestCommonAncestor LCA = new LowestCommonAncestor();
+		assertNull(LCA.LCA(LCA.root, 6, 3));
 	}
 
 }

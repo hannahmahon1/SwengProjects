@@ -30,7 +30,7 @@ public class LowestCommonAncestor {
 	  
 	    private int findLCAInternal(Node root, int x, int y) { 
 	  
-	        if (!findPath(root, x, pathOne) || !findPath(root, x, pathTwo)) { 
+	        if (!findPath(root, x, pathOne) || !findPath(root, y, pathTwo)) { 
 	            return -1; 
 	        } 
 	  

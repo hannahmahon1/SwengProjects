@@ -28,4 +28,47 @@ public class dagTest {
 		assertEquals(0, dag.E()); //won't add edge cause has a negative value 
 	}
 	
+	
+	@Test 
+	public void testIndegree()
+	{
+		dag dag = new dag(10);
+		dag.addEdge(1, 2);
+		dag.addEdge(2, 3);
+		dag.addEdge(3, 5);
+	
+		assertEquals(1, dag.indegree(3));
+		
+	}
+	@Test
+	public void testOutDegree()
+	{
+		dag dag = new dag(10);
+		dag.addEdge(1, 2);
+		dag.addEdge(2, 3);
+		dag.addEdge(3, 5);
+	
+		assertEquals(1, dag.outdegree(3));
+		
+	}
+	
+	@Test
+	public void testForCycle()
+	{
+		dag dag = new dag(10);
+
+		dag.addEdge(0, 1);
+		dag.addEdge(1, 2);
+		dag.addEdge(2, 2);
+		dag.addEdge(3, 3);
+		dag.addEdge(4, 4);
+		
+		dag.findCycle(1);
+		assertTrue(dag.hasCycle());
+		
+		
+	}
+
+	
+
 }

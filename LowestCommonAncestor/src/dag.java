@@ -7,8 +7,7 @@ public class dag
 	private int V;						
 	private int E;						
 	private ArrayList<Integer>[] adj;   
-	private int [] indegree;			
-	private int [] outdegree;			
+	private int [] indegree;				
 	private boolean visited [];		//nodes that have been visited already	
 	private boolean hasCycle;		
 	private boolean stack [];			
@@ -130,7 +129,7 @@ public class dag
 	{
 		findCycle(0);
 		
-		if(hasCycle) //Graph is not DAG
+		if(hasCycle)
 		{
 			return -1;
 		}

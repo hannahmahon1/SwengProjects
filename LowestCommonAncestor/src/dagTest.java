@@ -68,6 +68,18 @@ public class dagTest {
 		
 		
 	}
+	
+	@Test
+	public void testForNoCycle()
+	{
+		dag dag = new dag(10);
+		dag.addEdge(1, 2);
+		dag.addEdge(2, 3);
+		
+		dag.findCycle(0);
+		assertFalse(dag.hasCycle());
+		
+	}
 
 	@Test 
 	public void testLCA()
@@ -100,6 +112,18 @@ public class dagTest {
 		dag.addEdge(1, 2);
 		
 		assertEquals(2, dag.findLCA(2,2));
+	}
+	
+	@Test 
+	public void testForNoLCA()
+	{
+		dag dag = new dag(10);
+		dag.addEdge(0, 1);
+		dag.addEdge(1, 2);
+		dag.addEdge(2, 2);
+		dag.addEdge(3, 4);
+		
+		assertEquals(-1, dag.findLCA(7,3));
 	}
 	
 

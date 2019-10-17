@@ -138,7 +138,8 @@ public class dag
 			
 			return -1;
 		}
-		else if(E == 0)
+		
+		if(E == 0)
 		{
 			
 			return -1;
